@@ -13,8 +13,7 @@ const api = {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              Authorization:
-                "Bearer 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",
+              Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPENAI_KEY}`,
             },
             body: JSON.stringify({
               model: "gpt-3.5-turbo",
@@ -44,13 +43,13 @@ const api = {
   },
   youtube: {
     async getRelatedVideos(searchTerm: string): Promise<string[]> {
-      console.log('TERM: ', searchTerm)
+      console.log("TERM: ", searchTerm);
       try {
         const response = await fetch(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchTerm}&type=video&key=AIzaSyCmYJ86dIhi8UUEF-OIRLdBFnt4bRNN26s`
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchTerm}&type=video&key=${process.env.NEXT_PUBLIC_YOUTUBE_KEY}`
         );
         const data = await response.json();
-        console.log('!!!!!!!!!!!!', data)
+        console.log("!!!!!!!!!!!!", data);
         const videoIds: string[] =
           data.items?.map((item: any) => item.id.videoId) ?? [];
 
