@@ -13,7 +13,7 @@ const CoachDetails = () => (
       <Avatar size={70} url="https://pbs.twimg.com/media/Ea5zqsUX0AMoxxi.jpg" />
       <div>
         <Text level={6} size={TextSize.LG}>Coach Frank</Text>
-        <Text size={TextSize.XXS}>Legendary Skate Coach</Text>
+        <Text size={TextSize.SM}>Legendary Skate Coach</Text>
       </div>
     </div>
   </Wrapper>

@@ -101,7 +101,7 @@ const ChatScreen = () => {
           </div>
           <div className="secondary-videos">
             {videos.slice(1, videos.length - 1)?.map((v) => (
-              <Video id={v} />
+              <Video key={v} id={v} />
             ))}
           </div>
         </VideoSection>

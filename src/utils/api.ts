@@ -43,13 +43,11 @@ const api = {
   },
   youtube: {
     async getRelatedVideos(searchTerm: string): Promise<string[]> {
-      console.log("TERM: ", searchTerm);
       try {
         const response = await fetch(
           `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchTerm}&type=video&key=${process.env.NEXT_PUBLIC_YOUTUBE_KEY}`
         );
         const data = await response.json();
-        console.log("!!!!!!!!!!!!", data);
         const videoIds: string[] =
           data.items?.map((item: any) => item.id.videoId) ?? [];
 
