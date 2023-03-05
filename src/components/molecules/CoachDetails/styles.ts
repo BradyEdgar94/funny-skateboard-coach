@@ -10,7 +10,7 @@ flex-direction: column;
   height: 100%;
 
   .title {
-    padding: ${(props) => props.theme.space.md};
+    padding: ${(props) => props.theme.space.sm};
     background: ${(props) => props.theme.colors.background};
     border-top-left-radius: 0.85rem;
     border-top-right-radius: 0.85rem;
@@ -19,7 +19,7 @@ flex-direction: column;
   }
 
   .details {
-    padding: ${(props) => props.theme.space.md};
+    padding: ${(props) => props.theme.space.sm};
     display: flex;
     flex-direction: row;
     align-items: center;

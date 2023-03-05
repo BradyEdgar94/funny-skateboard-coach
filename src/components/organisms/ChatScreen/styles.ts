@@ -20,14 +20,12 @@ export const Body = styled.div<{ hidden: boolean }>`
   transform: translateY(0);
   transition: opacity 0.25s ease-in-out 0.5s, transform 0.25s ease-in-out 0.5s;
 
-  ${(props) => props.theme.mediaQueries.tablet} {
-    ${(props) =>
-      props.hidden &&
-      `
+  ${(props) =>
+    props.hidden &&
+    `
       opacity: 0;
       transform: translateY(10rem);
     `};
-  }
 
   ${(props) => props.theme.mediaQueries.tablet} {
     flex: 1;
@@ -51,8 +49,8 @@ export const TrickDetailsHeader = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 25rem;
-  min-height: 25rem;
+  height: 20rem;
+  min-height: 20rem;
   padding: ${(props) => props.theme.space.lg};
   border-bottom: ${(props) => props.theme.borders.sm}
     ${(props) => props.theme.colors.bg_1};
@@ -66,8 +64,6 @@ export const TrickDetailsHeader = styled.div`
     ${AvatarWrapper} {
       margin-right: ${(props) => props.theme.space.sm};
     }
-
-    
   }
 `;
 
@@ -96,8 +92,8 @@ export const VideoSection = styled.div`
   }
 
   .secondary-videos {
-    height: 25rem;
-    min-height: 25rem;
+    height: 20rem;
+    min-height: 20rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: ${(props) => props.theme.space.md};
@@ -122,8 +118,8 @@ export const ChatDetailsHeader = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 25rem;
-  min-height: 25rem;
+  height: 20rem;
+  min-height: 20rem;
   padding: ${(props) => props.theme.space.lg};
   border-bottom: ${(props) => props.theme.borders.sm}
     ${(props) => props.theme.colors.bg_1};

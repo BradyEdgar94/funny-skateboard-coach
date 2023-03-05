@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: ${(props) => props.theme.space.lg};
+  padding: 0 ${(props) => props.theme.space.lg} ${(props) => props.theme.space.md};
   margin-top: auto;
 `;
 

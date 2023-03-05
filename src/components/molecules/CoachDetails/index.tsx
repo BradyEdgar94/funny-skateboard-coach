@@ -10,7 +10,7 @@ const CoachDetails = () => (
       <Heading level={4}>Your Coach</Heading>
     </div>
     <div className="details">
-      <Avatar size={70} url="https://pbs.twimg.com/media/Ea5zqsUX0AMoxxi.jpg" />
+      <Avatar size={50} url="https://pbs.twimg.com/media/Ea5zqsUX0AMoxxi.jpg" />
       <div>
         <Text level={6} size={TextSize.LG}>Coach Frank</Text>
         <Text size={TextSize.SM}>Legendary Skate Coach</Text>
