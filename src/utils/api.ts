@@ -28,11 +28,8 @@ const api = {
           }
         );
         const data: ChatCompletion = await response.json();
-        console.log("!!!!!!!!!!!!!!!", data);
 
-        if (!data.choices.length) {
-          throw "Unknown error";
-        }
+        if (!data.choices.length) throw "Unknown error";
 
         return JSON.parse(data.choices[0].message.content);
       } catch (e) {

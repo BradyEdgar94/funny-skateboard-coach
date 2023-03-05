@@ -49,11 +49,11 @@ const ChatScreen = () => {
     if (responses.length) {
       api.youtube
         .getRelatedVideos(
-          `Trick tips for ${responses[responses.length - 1]?.answer.trickName}`
+          `Skateboard trick tips for ${
+            responses[responses.length - 1]?.answer.trickName
+          }`
         )
-        .then((res) => {
-          setVideos(res);
-        });
+        .then((res) => setVideos(res));
     }
   }, [responses]);
 
@@ -68,6 +68,7 @@ const ChatScreen = () => {
               answer: res,
             },
           ]);
+
           setFetchingResponse(false);
           setQuestion(null);
 
