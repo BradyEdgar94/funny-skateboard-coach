@@ -59,7 +59,7 @@ const ChatScreen = () => {
 
   useEffect(() => {
     if (question != null && fetchingResponse) {
-      api.openai.chatCompletion(question).then((res) => {
+      api.openai.chatCompletion(question).then(async (res) => {
         if (res) {
           setResponses([
             ...responses,
@@ -70,6 +70,11 @@ const ChatScreen = () => {
           ]);
           setFetchingResponse(false);
           setQuestion(null);
+
+          await api.firebase.saveQuestionAndResponse({
+            question,
+            answer: res.answer,
+          });
         }
       });
     }

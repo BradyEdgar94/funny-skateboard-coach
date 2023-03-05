@@ -1,7 +1,8 @@
 import "isomorphic-fetch";
-import { google } from "googleapis";
+import { collection, addDoc } from "firebase/firestore";
 
-import { ChatCompletion, CoachesAnawer } from "../types";
+import { ChatCompletion, CoachesAnawer, FirestoreRecord } from "../types";
+import { database } from "src/firebaseConfig";
 
 const api = {
   openai: {
@@ -56,6 +57,12 @@ const api = {
         console.log("ERROR: ", e);
         return [];
       }
+    },
+  },
+  firebase: {
+    async saveQuestionAndResponse(record: FirestoreRecord) {
+      const dbInstance = collection(database, "records");
+      await addDoc(dbInstance, record);
     },
   },
 };

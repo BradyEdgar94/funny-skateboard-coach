@@ -38,3 +38,9 @@ export interface ChatCompletion {
   };
   choices: ChatCompletionChoice[];
 }
+
+export interface FirestoreRecord {
+  question: string;
+  answer: string;
+
+}
